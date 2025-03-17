@@ -1,0 +1,6 @@
+<?php
+
+$access_token = "TEST-8401557715791462-021920-77f1f19051f9f2d246441d75afc280fe-1280049306";
+$host = $_SERVER["HTTP_HOST"];
+
+?>

@@ -1,0 +1,56 @@
+function HCaptcha(){ClassName="h-captcha"
+captchaWidth=303
+catpchaHeight=78
+cap=document.getElementsByClassName(ClassName)
+if(cap.length==0){return}else{cap=cap[0]}
+cap.style.display="none"
+formWidth=cap.parentElement.clientWidth
+scale=formWidth/captchaWidth
+marginWidth=(captchaWidth-formWidth)/2
+marginHeight=((catpchaHeight*scale)-catpchaHeight)/2
+cap.style.transform="scale("+scale.toFixed(2)+")"
+cap.style.marginLeft="-"+marginWidth+"px"
+cap.style.marginRight="-"+marginWidth+"px"
+cap.style.marginTop=marginHeight+"px"
+cap.style.marginBottom=marginHeight+"px"
+cap.style.justifyContent="center"
+cap.style.display="flex"}
+function CfCaptcha(){ClassName="cf-turnstile"
+captchaWidth=300
+catpchaHeight=65
+cap=document.getElementsByClassName(ClassName)
+if(cap.length==0){return}else{cap=cap[0]}
+cap.style.display="none"
+formWidth=cap.parentElement.clientWidth
+scale=formWidth/captchaWidth
+marginWidth=(captchaWidth-formWidth)/2
+marginHeight=((catpchaHeight*scale)-catpchaHeight)/2
+cap.style.transform="scale("+scale.toFixed(2)+")"
+cap.style.marginLeft="-"+marginWidth+"px"
+cap.style.marginRight="-"+marginWidth+"px"
+cap.style.marginTop=marginHeight+"px"
+cap.style.marginBottom=marginHeight+"px"
+cap.style.justifyContent="center"
+cap.style.display="flex"}
+function GCaptcha(){ClassName="g-recaptcha"
+captchaWidth=304
+catpchaHeight=78
+cap=document.getElementsByClassName(ClassName)
+if(cap.length==0){return}else{cap=cap[0]}
+cap.style.display="none"
+formWidth=cap.parentElement.clientWidth
+scale=formWidth/captchaWidth
+marginWidth=(captchaWidth-formWidth)/2
+marginHeight=((catpchaHeight*scale)-catpchaHeight)/2
+cap.style.transform="scale("+scale.toFixed(2)+")"
+cap.style.marginLeft="-"+marginWidth+"px"
+cap.style.marginRight="-"+marginWidth+"px"
+cap.style.marginTop=marginHeight+"px"
+cap.style.marginBottom=marginHeight+"px"
+cap.style.justifyContent="center"
+cap.style.display="flex"}
+function ResponsiveCaptcha(){CfCaptcha()
+HCaptcha()
+GCaptcha()}
+document.addEventListener('DOMContentLoaded',ResponsiveCaptcha)
+window.addEventListener("resize",ResponsiveCaptcha)
